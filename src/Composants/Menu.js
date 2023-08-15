@@ -1,0 +1,180 @@
+import "./Menu.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+
+import {CategoryContext} from "./CategoryContext"
+
+import {useState, useEffect, useContext} from 'react'
+import axios from "axios"
+import {useCart} from "react-use-cart"
+
+import Panier from "./Panier"
+
+
+import { useOrderContext } from './OrderContext'
+
+//pdf
+import { PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
+import PdfDocument from './PdfDocument';
+
+
+
+export default function Menu(){
+    
+    //changer le bouton
+    
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    
+    
+    //debut pdf
+    const handleDownloadReceipt = () => {
+
+    // Delay the PDF generation slightly to ensure modal is closed before rendering
+    setTimeout(() => {
+      const blob = new Blob([<PdfDocument />], { type: 'application/pdf' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'mon_reçu.pdf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, 500);
+  };
+  
+    
+    //fin pdf
+    
+    const {totalItems} = useCart()
+    
+    const [categories, setCategories] = useState([])
+    
+    
+    const { setSelectedCategory } = useContext(CategoryContext);
+    
+    //const { orderSuccess } = useOrderContext()
+    
+    const [orderSuccess, setOrderSuccess] = useState(false);
+
+    useEffect(() => {
+        const orderSuccessFromLocalStorage = localStorage.getItem('orderSuccess');
+        setOrderSuccess(orderSuccessFromLocalStorage === 'true');
+        
+        // Set orderSuccess to false after 3 minutes
+    const timer = setTimeout(() => {
+      setOrderSuccess(false);
+      localStorage.setItem('orderSuccess', 'false');
+    }, 1 * 60 * 1000);
+
+    // Clear the timer on component unmount
+    return () => clearTimeout(timer);
+        
+    }, []);
+    
+    
+    
+    useEffect(()=>{
+        const fetchdata = async()=>{
+            const result = await axios('http://127.0.0.1:8000/api/categories/')
+            setCategories(result.data)
+        }
+        
+        fetchdata()
+    }, [])
+    
+    
+    
+    const handleCategorySelection = (nom)=>{
+        setSelectedCategory(nom)
+        
+    }
+    
+    //debut Modal
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+      };
+    
+    const closeModal = () => {
+        setIsModalOpen(false);
+      };
+    //fin Modal
+
+    
+    
+    return(
+        <>
+        <div className="bigmenu">
+            <div className="Menu">
+                {/*<label for="menu">
+                    <FontAwesomeIcon icon={faBars} />
+                </label> */}
+                <label htmlFor="menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                  <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
+                </label>
+                <input type="checkbox" id="menu" />
+                <div className="name">YATTE</div>
+                <input type="checkbox" id="panier" />
+                <label for="panier">
+                    <FontAwesomeIcon icon={faShoppingCart} /><span className="mnumn">
+                    {totalItems}
+                </span>
+                </label>
+                
+                <div className="leftmenu">
+                    <p onClick={() => handleCategorySelection(null)}>Toutes les catégories</p>
+                    {categories.map(categorie=>{
+                       return(
+                           <div>
+                           <p onClick={()=>handleCategorySelection(categorie)}>{categorie.nom}</p>
+                           </div>
+                        )
+                   })}
+                   
+                  {orderSuccess && (
+                    <>
+                        
+                    <PDFDownloadLink document={<PdfDocument />} fileName="mon_reçu.pdf" className="Recu">
+                          {({ blob, url, loading, error }) =>
+                            loading ? 'Chargement...' : 'Télécharger le reçu'
+                          }
+                        </PDFDownloadLink>
+                    </>
+                  )}
+                </div>
+                <div className="cart">
+                    <div className="hpanier">
+                    <label for="panier">
+                        <FontAwesomeIcon icon={faTimes} className="faTime"/>
+                    </label>
+                    <p className="hpNom">mon panier</p>
+                    <img
+                    src="../../img/a2.png"
+                    alt="Visa"
+                    className="faImage"
+                    />
+                    </div>
+                    <div>
+                        <Panier />
+                    </div>
+                </div>
+            </div>
+            <div className="barre">
+            </div>
+        </div>
+        <div className="grdEcran">
+            <p onClick={() => handleCategorySelection(null)}>Toutes les catégories</p>
+                    {categories.map(categorie=>{
+                       return(
+                           <div>
+                           <p onClick={()=>handleCategorySelection(categorie)}>{categorie.nom}</p>
+                           </div>
+                        )
+                   })}
+        </div>
+        </>
+    )
+}

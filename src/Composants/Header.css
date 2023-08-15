@@ -1,0 +1,39 @@
+.Header{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+        "leftHeader"
+        "rightHeader"
+        "middleHeader"
+    ;
+}
+
+.leftHeader{
+    grid-area: leftHeader;
+    display: none;
+}
+
+.rightHeader {
+    display: none;
+    grid-area: rightHeader;
+}
+
+.middleHeader{
+    grid-area: middleHeader;
+}
+
+@media screen and (min-width:960px){
+    .Header{
+        grid-auto-columns: 1fr 2fr 1fr;
+        grid-template-areas: 
+            "leftHeader middleHeader rightHeader"
+        ;
+    }
+    
+    .leftHeader{
+        display: block;
+    }
+    .rightHeader{
+        display: block;
+    }
+}

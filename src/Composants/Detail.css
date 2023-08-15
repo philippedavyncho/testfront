@@ -1,0 +1,51 @@
+.detailCont {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "detailNom"
+        "detailImg"
+        "detailPrix"
+        "detailDesc"
+    ;
+    color: #0d0d82;
+}
+
+.detailImg {
+    grid-area: detailImg;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+
+.detailNom {
+    grid-area: detailNom;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    margin: 0 20px 10px;
+    padding: 10px 0 ;
+}
+
+.detailPrix {
+    grid-area: detailPrix;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 20px 20px;
+    padding: 10px 0;
+    gap: 20px;
+}
+
+.detailDesc {
+    grid-area: detailDesc;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
