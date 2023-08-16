@@ -25,7 +25,7 @@ export default function Donnees(){
 
     useEffect(()=>{
         const fetchdata = async()=>{
-            const result = await axios('http://127.0.0.1:8000/api/produits/')
+            const result = await axios('/.netlify/functions/produit')
             setData(result.data)
             setTotalPages(Math.ceil(result.data.length / pageSize));
             
