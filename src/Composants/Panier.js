@@ -1,7 +1,6 @@
 import {useCart} from "react-use-cart"
 import "./Panier.css"
 
-import { ReactComponent as IconTruck } from "bootstrap-icons/icons/truck.svg";
 
 //modal
 import Modal from './Modal';
@@ -39,7 +38,6 @@ export default function Panier(){
         cartTotal,
         updateItemQuantity,
         removeItem,
-        emptyCart
         
     } = useCart()
     

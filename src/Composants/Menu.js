@@ -13,10 +13,9 @@ import {useCart} from "react-use-cart"
 import Panier from "./Panier"
 
 
-import { useOrderContext } from './OrderContext'
 
-//pdf
-import { PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
+
+import { PDFDownloadLink } from '@react-pdf/renderer';
 import PdfDocument from './PdfDocument';
 
 
@@ -27,25 +26,6 @@ export default function Menu(){
     
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     
-    
-    //debut pdf
-    const handleDownloadReceipt = () => {
-
-    // Delay the PDF generation slightly to ensure modal is closed before rendering
-    setTimeout(() => {
-      const blob = new Blob([<PdfDocument />], { type: 'application/pdf' });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.setAttribute('download', 'mon_reçu.pdf');
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }, 500);
-  };
-  
-    
-    //fin pdf
     
     const {totalItems} = useCart()
     
@@ -91,27 +71,10 @@ export default function Menu(){
         
     }
     
-    //debut Modal
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const openModal = () => {
-        setIsModalOpen(true);
-      };
-    
-    const closeModal = () => {
-        setIsModalOpen(false);
-      };
-    //fin Modal
-
-    
-    
     return(
         <>
         <div className="bigmenu">
             <div className="Menu">
-                {/*<label for="menu">
-                    <FontAwesomeIcon icon={faBars} />
-                </label> */}
                 <label htmlFor="menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                   <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
                 </label>

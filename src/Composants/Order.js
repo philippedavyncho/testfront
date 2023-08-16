@@ -10,14 +10,9 @@ import {useCart} from "react-use-cart"
 
 import { toast } from 'react-toastify';
 
-import {Link} from "react-router-dom"
-
-import { useNavigate } from "react-router-dom";
-
 
 import { useOrderContext } from './OrderContext';
 
-import PdfDocument from "./PdfDocument"
 
 import './Order.css'
 
@@ -33,10 +28,6 @@ export default function Order({closeModal}){
     
     const {items,cartTotal, emptyCart} = useCart()
     
-    
-    const navigate = useNavigate();
-
-
 
     const { setOrderSuccess } = useOrderContext();
     

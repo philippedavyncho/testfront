@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Page, Document, StyleSheet, PDFViewer, Text, View, Image } from '@react-pdf/renderer'; 
+import { Page, Document, StyleSheet, Text, View, Image } from '@react-pdf/renderer'; 
 
 
 const styles = StyleSheet.create({
