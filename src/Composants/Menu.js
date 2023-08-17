@@ -88,7 +88,7 @@ export default function Menu(){
                 </label>
                 
                 <div className="leftmenu">
-                    <p onClick={() => handleCategorySelection(null)}>Toutes les catégories</p>
+                    <p onClick={() => handleCategorySelection(null)}>Nos catégories</p>
                     {categories.map(categorie=>{
                        return(
                            <div>

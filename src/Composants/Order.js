@@ -47,7 +47,7 @@ export default function Order({closeModal}){
             
             axios({
               method: 'post',
-              url: 'http://127.0.0.1:8000/api/cd/orders/',
+              url: '/.netlify/functions/commande',
               data: {
                 "nom": nom,
                 
