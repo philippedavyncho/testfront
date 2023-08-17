@@ -57,7 +57,7 @@ export default function Menu(){
     
     useEffect(()=>{
         const fetchdata = async()=>{
-            const result = await axios('http://127.0.0.1:8000/api/categories/')
+            const result = await axios('/.netlify/functions/categories')
             setCategories(result.data)
         }
         
