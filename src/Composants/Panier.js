@@ -44,7 +44,7 @@ export default function Panier(){
     
     useEffect(()=>{
         const fetchData = async()=>{
-            const result = await axios('http://127.0.0.1:8000/api/produits/')
+            const result = await axios('/.netlify/functions/produits')
             setData(result.data)
         }
         fetchData()
