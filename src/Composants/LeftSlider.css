@@ -1,6 +1,6 @@
 .carouselA {
   width: 230px;
-  height: 200px;
+  height: 400px;
   overflow: hidden;
 }
 
@@ -14,7 +14,7 @@
 
 .carousel-slideA img {
   width: 230px;
-  height: 200px;
+  height: 400px;
   margin: 5px 0;
   object-fit: cover;
   box-sizing: border-box;
