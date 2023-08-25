@@ -1,5 +1,5 @@
 .carouselA {
-  width: 230px;
+  width: 400px;
   height: 400px;
   overflow: hidden;
 }
@@ -13,7 +13,7 @@
 }
 
 .carousel-slideA img {
-  width: 230px;
+  width: 400px;
   height: 400px;
   margin: 5px 0;
   object-fit: cover;
