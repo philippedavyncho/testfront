@@ -13,7 +13,7 @@ import {useCart} from "react-use-cart"
 import Panier from "./Panier"
 
 
-
+import {Link} from "react-router-dom"
 
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import PdfDocument from './PdfDocument';
@@ -79,7 +79,7 @@ export default function Menu(){
                   <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
                 </label>
                 <input type="checkbox" id="menu" />
-                <div className="name">YATTE</div>
+                <div className="name"><link to="/">YATTE</Link></div>
                 <input type="checkbox" id="panier" />
                 <label for="panier">
                     <FontAwesomeIcon icon={faShoppingCart} /><span className="mnumn">
