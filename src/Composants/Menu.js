@@ -79,7 +79,7 @@ export default function Menu(){
                   <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
                 </label>
                 <input type="checkbox" id="menu" />
-                <div className="name"><Link to="/">YATTE</Link></div>
+                <div className="name"><Link to="/" style={{ textDecoration: 'none' }}>YATTE</Link></div>
                 <input type="checkbox" id="panier" />
                 <label for="panier">
                     <FontAwesomeIcon icon={faShoppingCart} /><span className="mnumn">
