@@ -95,6 +95,9 @@
 .name {
     font-size: 18px;
     font-weight: bolder;
+    
+}
+.nameLink {
     text-decoration: none;
 }
 
