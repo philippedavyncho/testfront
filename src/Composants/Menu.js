@@ -22,6 +22,11 @@ import PdfDocument from './PdfDocument';
 
 export default function Menu(){
     
+    //gerer la case a cocher
+    
+    const [isCartOpen, setIsCartOpen] = useState(false);
+
+    
     //changer le bouton
     
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -80,13 +85,13 @@ export default function Menu(){
                 </label>
                 <input type="checkbox" id="menu" />
                 <div className="name"><Link to="/" className="nameLink">YATTE</Link></div>
-                <input type="checkbox" id="panier" />
-                <label for="panier">
+                
+                <input type="checkbox" id="panier" checked={isCartOpen} />
+                <label for="panier" onClick={() => setIsCartOpen(!isCartOpen)}>
                     <FontAwesomeIcon icon={faShoppingCart} /><span className="mnumn">
                     {totalItems}
                 </span>
                 </label>
-                
                 <div className="leftmenu">
                     <p onClick={() => handleCategorySelection(null)}>Nos catégories</p>
                     {categories.map(categorie=>{
@@ -121,7 +126,8 @@ export default function Menu(){
                     />
                     </div>
                     <div>
-                        <Panier />
+                        <Panier isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />
+
                     </div>
                 </div>
             </div>
