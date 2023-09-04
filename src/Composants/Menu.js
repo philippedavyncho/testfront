@@ -121,7 +121,7 @@ export default function Menu(){
                     />
                     </div>
                     <div>
-                        <Panier isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />
+                        <Panier />
 
                     </div>
                 </div>
