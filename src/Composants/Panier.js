@@ -67,7 +67,7 @@ export default function Panier(){
                 alt="Visa"
                 className="igVide"
               />
-              <button>Continuer votre shopping</button>
+              <button id="panier">Continuer votre shopping</button>
               </div>
     return(
         <>
