@@ -16,9 +16,6 @@ import Produit from "./Produit"
 
 export default function Panier(){
     
-    //decocher case
-    const [isPanierChecked, setIsPanierChecked] = useState(false);
-    
     //recommandation
     const [data, setData] = useState([])
     
@@ -34,10 +31,7 @@ export default function Panier(){
       };
     //fin modal
     
-    //fonction decocher case
-    const uncheckPanier = () => {
-    setIsPanierChecked(false);
-  };
+
     
     
     const {
@@ -73,7 +67,7 @@ export default function Panier(){
                 alt="Visa"
                 className="igVide"
               />
-              <button onClick={uncheckPanier}>Continuer votre shopping</button>
+              <button>Continuer votre shopping</button>
               </div>
     return(
         <>
