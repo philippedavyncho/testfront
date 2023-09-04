@@ -14,13 +14,7 @@ import axios from "axios"
 import Produit from "./Produit"
 
 
-export default function Panier({ isCartOpen, setIsCartOpen }){
-    
-    // gerer la case a cocher
-    
-    const handleCartClose = () => {
-    setIsCartOpen(false); // Cela décochera la case à cocher
-  };
+export default function Panier(){
     
     //recommandation
     const [data, setData] = useState([])
@@ -66,11 +60,11 @@ export default function Panier({ isCartOpen, setIsCartOpen }){
     );
     
 
-    if(isEmpty) return <div className={`cart ${isCartOpen ? 'open' : ''}`}><div className="panierVide"><p className="pvtitle">votre panier est vide</p><img
+    if(isEmpty) return <div className="panierVide"><p className="pvtitle">votre panier est vide</p><img
                 src="../../img/a2.png"
                 alt="Visa"
                 className="igVide"
-              /><button onClick={handleCartClose}>Fermer le panier</button></div></div>
+              /></div>
     return(
         <>
         <div className="cartcontainer">
