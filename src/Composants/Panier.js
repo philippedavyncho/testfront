@@ -64,7 +64,9 @@ export default function Panier(){
                 src="../../img/a2.png"
                 alt="Visa"
                 className="igVide"
-              /></div>
+              />
+              <button onClick={()=>closeModal()}>continuer votre shopping</button>
+              </div>
     return(
         <>
         <div className="cartcontainer">
