@@ -21,9 +21,9 @@
 .leftmenu p {
     background-color: rgba(0,35,95,0.9);
     color: #FFFAFA;
-    padding: 5px 0;
-    font-size: 12px;
-    font-weight: bold;
+    padding: 10px 0;
+    font-size: 14px;
+    text-transform: uppercase;
 }
 
 .leftmenu p:hover {
@@ -131,11 +131,11 @@
 }
 
 .Recu {
-    background-color: blue;
-    text-decoration: none;
-    padding: 10px;
-    margin: 10px;
-    color: white;
+    background-color: rgba(0,35,95,0.9);
+    color: #FFFAFA;
+    padding: 10px 0;
+    font-size: 14px;
+    text-transform: uppercase;
 }
 
 
