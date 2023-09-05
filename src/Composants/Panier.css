@@ -145,6 +145,12 @@
 
 .btnshop {
     background-color: #0d0d82;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0.5px 0 #ab4b0f;
+    text-align: center;
 }
 
 
