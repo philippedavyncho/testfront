@@ -57,4 +57,12 @@
       width: 1000px;
       height: 400px;
     }
+    
+    .carousel-slide {
+      width: 1000px;
+    }
+    
+    .carousel-slide img {
+      width: 1000px;
+    }
 }
