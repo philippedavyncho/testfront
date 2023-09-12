@@ -8,9 +8,6 @@ import Right from "./Right"
 export default function Header(){
     return(
         <div className="Header">
-            <div className="leftHeader">
-                <Right />
-            </div>
             <div className="middleHeader">
                 <Slider />
             </div>
