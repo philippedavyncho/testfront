@@ -9,13 +9,13 @@ export default function Header(){
     return(
         <div className="Header">
             <div className="leftHeader">
-                <LeftSlider/>
+                <Right />
             </div>
             <div className="middleHeader">
                 <Slider />
             </div>
             <div className="rightHeader">
-                <Right />
+                <LeftSlider/>
             </div>
         </div>
     )
