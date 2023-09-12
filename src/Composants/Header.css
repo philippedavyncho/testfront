@@ -24,7 +24,7 @@
 
 @media screen and (min-width:960px){
     .Header{
-        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
         grid-template-areas: 
             "leftHeader middleHeader rightHeader"
         ;
