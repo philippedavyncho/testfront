@@ -54,7 +54,7 @@
 
 @media screen and (min-width:960px){
     .carousel {
-      width: 100%;
+      width: 600px;
       height: 400px;
     }
 }
