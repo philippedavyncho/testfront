@@ -33,11 +33,14 @@ header {
     grid-area: header;
 }
 
+.sectionCont{
+    text-align: center;
+    width: 1300px;
+}
+
 section {
     background-color: rgba(235,235,255,0.9);
     grid-area: section;
-    width: 1000px;
-    text-align: center;
 }
 
 footer {
