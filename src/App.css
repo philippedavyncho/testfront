@@ -45,7 +45,7 @@ footer {
 
 @media screen and (min-width:960px){
     .App{
-        grid-template-columns: 300px 3fr;
+        grid-template-columns: 50px 3fr;
         grid-template-areas:
             "anime anime"
             "header header"
