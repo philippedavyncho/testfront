@@ -18,14 +18,13 @@
 
 @media screen and (min-width:960px){
     .Header{
-        width: 1200px;
-        grid-template-columns: 1000px 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas: 
             "middleHeader rightHeader"
         ;
     }
     
     .rightHeader{
-        display: block;
+        display: none;
     }
 }
