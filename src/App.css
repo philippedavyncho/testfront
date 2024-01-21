@@ -12,7 +12,7 @@
         "footer"
     ;
     grid-gap: 10px;
-    background-color: #D3D3D3;
+    background-color: rgba(235,235,255,0.9);
 
 }
 
@@ -54,22 +54,22 @@ footer {
             "nav section"
             "footer footer"
         ;
-        background-color: rgba(235,235,255,0.9);
+        background-color: #D3D3D3;
     }
     .search {
         display: none;
     }
     
     nav {
-        background-color: rgba(235,235,255,0.9);
+        background-color: #D3D3D3;
     }
     
     header {
-        background-color: rgba(235,235,255,0.9);
+        background-color: #D3D3D3;
     }
     
     section {
-        background-color: rgba(235,235,255,0.9);
+        background-color: #D3D3D3;
     }
 
     
