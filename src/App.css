@@ -53,11 +53,14 @@ footer {
             "nav section"
             "footer footer"
         ;
-        text-align: center;
-        width: 1000px;
     }
     .search {
         display: none;
     }
     
+    .senav {
+        display: flex;
+        justify-content: center;
+        width: 1200px;
+    }
 }

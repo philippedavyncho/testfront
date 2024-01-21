@@ -27,6 +27,7 @@ export default function App(){
             <div className="Anime">
                 <Part />
             </div>
+            <div className="senav">
             <nav>
                 <OrderProvider>
                   <Menu />
@@ -41,6 +42,7 @@ export default function App(){
                     <Route path='/:produitId' element={<Detail/>}/>
                 </Routes>
             </section>
+            </div>
             <footer>
                 <Footer />
             </footer>
