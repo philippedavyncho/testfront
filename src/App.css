@@ -13,6 +13,7 @@
     ;
     grid-gap: 10px;
     background-color: rgba(235,235,255,0.9);
+
 }
 
 
@@ -52,15 +53,10 @@ footer {
             "nav section"
             "footer footer"
         ;
+        text-align: center;
     }
     .search {
         display: none;
     }
     
-    .sectionCont {
-        width: 1000px;
-        display: flex;
-        justify-content: center;
-    }
-
 }

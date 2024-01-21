@@ -35,14 +35,12 @@ export default function App(){
             <header>
                 <Header />
             </header>
-            <div className="sectionCont">
             <section>
                 <Routes>
                     <Route path='/' element={<Donnees />}/>
                     <Route path='/:produitId' element={<Detail/>}/>
                 </Routes>
             </section>
-            </div>
             <footer>
                 <Footer />
             </footer>
