@@ -43,6 +43,9 @@ footer {
     grid-area: footer;
     z-index: 2;
 }
+.navsec {
+        display: none;
+    }
 
 @media screen and (min-width:960px){
     .App{
