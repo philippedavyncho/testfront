@@ -23,32 +23,19 @@
   0% {
     transform: translateX(0);
   }
-  10% {
-    transform: translateX(0);
-  }
-  
-  
   25% {
-    transform: translateX(-105%); /* Défile vers la gauche */
-  }
-  35% {
-    transform: translateX(-105%); /* Défile vers la gauche */
-  }
-  50% {
-    transform: translateX(-210%); /* Défile vers la gauche */
-  }
-  60% {
-    transform: translateX(-210%); /* Défile vers la gauche */
-  }
-  75%{
-      transform: translateX(-310%);
-  }
-  85%{
-      transform: translateX(-310%);
+    transform: translateX(-100%);
   }
   
+  
+  50% {
+    transform: translateX(-200); 
+  }
+  75% {
+    transform: translateX(-300); 
+
   100% {
-    transform: translateX(0); /* Revient à la position initiale */
+    transform: translateX(0); 
   }
 }
 
@@ -65,4 +52,4 @@
     .carousel-slide img {
       width: 100%;
     }
-}
+} 
