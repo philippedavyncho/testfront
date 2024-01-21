@@ -58,4 +58,10 @@ footer {
         display: none;
     }
     
+    .navsec {
+        display: flex;
+        justify-content: center;
+        width: 1300px;
+    }
+    
 }

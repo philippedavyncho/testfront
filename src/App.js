@@ -30,6 +30,7 @@ export default function App(){
             <header>
                 <Header />
             </header>
+            <div className='navsec'>
             <nav>
                 <OrderProvider>
                   <Menu />
@@ -42,6 +43,7 @@ export default function App(){
                     <Route path='/:produitId' element={<Detail/>}/>
                 </Routes>
             </section>
+            </div>
             <footer>
                 <Footer />
             </footer>
