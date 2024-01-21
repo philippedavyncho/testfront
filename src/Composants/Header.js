@@ -1,5 +1,4 @@
 import "./Header.css"
-import Slider from "./Slider"
 import LeftSlider from "./LeftSlider"
 
 
