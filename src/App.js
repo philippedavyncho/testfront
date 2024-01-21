@@ -27,22 +27,21 @@ export default function App(){
             <div className="Anime">
                 <Part />
             </div>
-            <div className="senav">
+            <header>
+                <Header />
+            </header>
             <nav>
                 <OrderProvider>
                   <Menu />
                 </OrderProvider>
             </nav>
-            <header>
-                <Header />
-            </header>
+            
             <section>
                 <Routes>
                     <Route path='/' element={<Donnees />}/>
                     <Route path='/:produitId' element={<Detail/>}/>
                 </Routes>
             </section>
-            </div>
             <footer>
                 <Footer />
             </footer>

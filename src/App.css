@@ -58,9 +58,4 @@ footer {
         display: none;
     }
     
-    .senav {
-        display: flex;
-        justify-content: center;
-        width: 1200px;
-    }
 }
