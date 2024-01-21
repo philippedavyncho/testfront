@@ -29,10 +29,10 @@
   
   
   50% {
-    transform: translateX(-200); 
+    transform: translateX(-200%); 
   }
   75% {
-    transform: translateX(-300); 
+    transform: translateX(-300%); 
   }
 
   100% {
