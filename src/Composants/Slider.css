@@ -59,12 +59,12 @@
     transform: translateX(0);
   }
   25% {
-    transform: translateX(-60%);
+    transform: translateX(-70%);
   }
   
   
   50% {
-    transform: translateX(-120%); 
+    transform: translateX(-140%); 
   }
   75% {
     transform: translateX(-160%); 
