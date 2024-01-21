@@ -1,14 +1,12 @@
 import "./Header.css"
-import LeftSlider from "./LeftSlider"
-
-
+import Slider from "./Slider"
 
 
 export default function Header(){
     return(
         <div className="Header">
-            <div className="rightHeader">
-                <LeftSlider/>
+            <div className="middleHeader">
+                <Slider />
             </div>
         </div>
     )
