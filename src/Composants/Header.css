@@ -20,11 +20,9 @@
     .Header{
         grid-template-columns: 1fr;
         grid-template-areas: 
-            "middleHeader rightHeader"
+            "rightHeader"
+            "middleHeader"
         ;
     }
     
-    .rightHeader{
-        display: none;
-    }
 }
