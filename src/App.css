@@ -54,6 +54,7 @@ footer {
             "nav section"
             "footer footer"
         ;
+        background-color: rgba(135,135,255,0.9);
     }
     .search {
         display: none;
