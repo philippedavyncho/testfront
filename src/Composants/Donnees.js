@@ -17,7 +17,7 @@ export default function Donnees(){
     
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
-    const [pageSize] = useState(16);
+    const [pageSize] = useState(18);
     
     
     const { selectedCategory } = useContext(CategoryContext);
